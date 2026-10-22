@@ -1,0 +1,44 @@
+media:
+  - name: story-images
+    label: Story Images
+    input: public/images
+    output: /images
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/content/posts
+    filename: "{primary}.md"
+    view:
+      fields: [title, pubDate, category, draft]
+      primary: title
+      sort: [pubDate, title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Short description
+        type: text
+        required: true
+      - name: pubDate
+        label: Publish date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: string
+        default: Fantasy
+      - name: cover
+        label: Cover image URL
+        type: string
+        description: Optional. Paste an image URL, or upload images in the media section and use its /images/... path.
+      - name: draft
+        label: Draft (hide from public site)
+        type: boolean
+        default: false
+      - name: body
+        label: Story
+        type: rich-text
+        required: true

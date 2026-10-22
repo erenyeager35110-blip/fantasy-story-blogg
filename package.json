@@ -1,0 +1,12 @@
+{
+  "name": "dragon-tales-blog",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "astro build"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "astro": "^5.13.0"
+  }
+}
